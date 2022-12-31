@@ -1,0 +1,70 @@
+/* You can add global styles to this file, and also import other style files */
+.position-nav {
+    position: fixed;
+    top: 0;
+    z-index: 100;
+    width: 100%;
+    height: 86px;
+}
+
+.bg-navbar {
+    // background-color: rgba(156, 134, 32, 0.5);
+    // background-color: rgba(0, 100, 175, 0.5);
+    // background-color: rgba(164, 213, 228, 0.75);
+    // background-color: rgba(96, 190, 219, 0.75);
+    background: linear-gradient(rgba(164, 213, 228, 0.75), rgba(96, 190, 219, 0.75));
+}
+
+.bg-transparent {
+    background-color: rgba(255,255,255, 0.5) !important;
+}
+
+.rounded-border {
+    border-radius: 1.5rem;
+}
+
+.book_cover {
+    max-width: 500px;
+    max-height: 650px;
+}
+
+.text-justify {
+    text-align: justify;
+}
+
+.user-name {
+    display: flex;
+    align-items: center;
+    padding: 10px 15px;
+    border: 1px solid transparent;
+    color: rgb(53, 89, 128);
+}
+
+.navbar-brand:hover {
+    color: rgb(20, 76, 136);
+    border-radius: 1.5rem;
+    // padding: 10px 14px;
+    border: 1px solid rgb(84, 96, 109);
+    background: linear-gradient(rgba(96, 190, 219, 0.75), rgba(164, 213, 228, 0.75));
+    cursor: pointer;
+}
+
+.shopping-cart {
+    color: rgb(53, 89, 128);
+    font-size: 30px;
+    padding: 10px;
+}
+
+.crystal-border {
+    border: 1px solid transparent;
+}
+
+body {
+    // background-color: rgb(250, 225, 195);
+    background-color: rgb(195, 237, 250);
+    // background: linear-gradient(rgb(195, 237, 250), rgba(96, 190, 219, 0.75));
+}
+
+h1 {
+    color: rgb(84, 96, 109);
+}

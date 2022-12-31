@@ -1,0 +1,50 @@
+<nav class="navbar bg-navbar position-nav">
+    <div class="container-fluid">
+      <img src="./assets/img/logo_navbar.png" class="ms-5" style="max-height: 70px;" alt="">
+      <!-- <a class="navbar-brand m-auto" href="#">Book Stand</a> -->
+      <!-- <p>Donde encuentras porque encuentras</p> -->
+      <div class="navbar-brand ms-auto user-name">
+        <span class="material-icons me-3" style="font-size: 40px;">&#xea78;</span>
+        <span><b><i>Christopher Diego</i></b></span>
+      </div>
+      <div class="navbar-brand me-5 crystal-border">
+        <span class="material-icons shopping-cart">&#xe8cc;</span>
+      </div>
+      <button class="navbar-brand crystal-border" style="background-color: transparent;" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+        <div class="offcanvas-header bg-navbar">
+          <h5 class="offcanvas-title fs-2" id="offcanvasNavbarLabel">Menú</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <form class="d-flex bg-navbar px-2" role="search">
+          <input class="form-control me-2" type="search" placeholder="Buscar un título" aria-label="Search">
+          <button class="btn btn-dark" type="submit">Buscar</button>
+        </form>
+        <div class="offcanvas-body bg-navbar">
+          <ul class="navbar-nav justify-content-end flex-grow-1 pe-3 fs-3">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#">Inicio</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Catálogo</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Otros
+              </a>
+              <ul class="dropdown-menu fs-4">
+                <li><a class="dropdown-item" href="#">Autores</a></li>
+                <li><a class="dropdown-item" href="#">Editoriales</a></li>
+                <li>
+                  <hr class="dropdown-divider">
+                </li>
+                <li><a class="dropdown-item" href="#">Sobre nosotros</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+</nav>
