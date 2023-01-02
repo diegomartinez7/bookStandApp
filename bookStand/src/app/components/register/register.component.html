@@ -1,0 +1,82 @@
+<div class="h-100 d-flex align-items-center">
+    <div class="p-4 rounded-border bg-navbar col-7 mx-auto">
+        <p class="fs-2 text-center text-primary">¡Crea tu cuenta totalmente gratis!</p>
+        <form [formGroup]="registerForm" (ngSubmit)="register()" class="row">
+
+            <mat-form-field appearance="fill" class="col-5 mx-auto my-2">
+                <mat-label>Nombre completo</mat-label>
+                <input matInput placeholder="Lemuel Gulliver" formControlName="nombre" required>
+                <mat-error *ngIf="this.registerForm.get('nombre')?.touched &&
+                    this.registerForm.get('nombre')?.hasError('required')">
+                    Valor requerido
+                </mat-error>
+                <mat-error *ngIf="this.registerForm.get('nombre')?.touched &&
+                    this.registerForm.get('nombre')?.hasError('maxlength')">
+                    Nombre menor a 70 caracteres
+                </mat-error>
+            </mat-form-field>
+            
+            <mat-form-field appearance="fill" class="col-5 mx-auto my-2">
+                <mat-label>Nombre de usuario</mat-label>
+                <input matInput placeholder="Lewis Carroll" formControlName="username" required>
+                <mat-error *ngIf="this.registerForm.get('username')?.touched &&
+                    this.registerForm.get('username')?.hasError('required')">
+                    Valor requerido
+                </mat-error>
+                <mat-error *ngIf="this.registerForm.get('username')?.touched &&
+                    this.registerForm.get('username')?.hasError('maxlength')">
+                    Nombre menor a 50 caracteres
+                </mat-error>
+            </mat-form-field>
+            
+            <mat-form-field appearance="fill" class="col-5 mx-auto my-2">
+                <mat-label>Correo electrónico</mat-label>
+                <input matInput placeholder="correo@ejemplo.com" formControlName="email" required>
+                <mat-error *ngIf="this.registerForm.get('email')?.touched &&
+                    this.registerForm.get('email')?.hasError('required')">
+                    Valor requerido
+                </mat-error>
+                <mat-error *ngIf="this.registerForm.get('email')?.touched &&
+                    this.registerForm.get('email')?.hasError('email')">
+                    Email no válido
+                </mat-error>
+            </mat-form-field>
+
+            <mat-form-field appearance="fill" class="col-5 mx-auto my-2">
+                <mat-label>Contraseña</mat-label>
+                <input matInput formControlName="password" required>
+                <mat-error *ngIf="this.registerForm.get('password')?.touched &&
+                    this.registerForm.get('password')?.hasError('required')">
+                    Valor requerido
+                </mat-error>
+                <mat-error *ngIf="this.registerForm.get('password')?.touched &&
+                    this.registerForm.get('password')?.hasError('minlength')">
+                    Contraseña mínima de 8 caracteres
+                </mat-error>
+            </mat-form-field>
+
+            <mat-form-field appearance="fill" class="col-7 mx-auto my-2">
+                <mat-label>Confirmar contraseña</mat-label>
+                <input matInput formControlName="passwordConfirm" required>
+                <mat-error *ngIf="this.registerForm.get('passwordConfirm')?.touched &&
+                    this.registerForm.get('passwordConfirm')?.hasError('required')">
+                    Valor requerido
+                </mat-error>
+                
+            </mat-form-field>
+            <mat-error *ngIf="this.registerForm.get('passwordConfirm')?.dirty &&
+                this.registerForm.hasError('passwordsNotMatching')">
+                <p class="text-center">Las contraseñas no coinciden</p>
+            </mat-error>
+
+            <button class="btn btn-primary col-7 mx-auto" type="submit" mat-button [disabled]="!registerForm.valid">
+                <span class="fs-5">Registrarse</span>
+            </button>
+        </form>
+        <p class="text-center fs-5 my-2">
+            <b>
+                <a [routerLink]="['/login']">Volver al inicio sesión</a>
+            </b>
+        </p>
+    </div>
+</div>

@@ -3,10 +3,18 @@
       <img src="./assets/img/logo_navbar.png" class="ms-5" style="max-height: 70px;" alt="">
       <!-- <a class="navbar-brand m-auto" href="#">Book Stand</a> -->
       <!-- <p>Donde encuentras porque encuentras</p> -->
-      <div class="navbar-brand ms-auto user-name">
-        <span class="material-icons me-3" style="font-size: 40px;">&#xea78;</span>
-        <span><b><i>Christopher Diego</i></b></span>
+      <div class="navbar-brand ms-auto user-name" [matMenuTriggerFor]="menu">
+        <!-- <button mat-button [matMenuTriggerFor]="menu"> -->
+          <span class="material-icons me-3" style="font-size: 40px;">&#xea78;</span>
+          <span><b><i>{{user.username}}</i></b></span>
+        <!-- </button> -->
       </div>
+      <mat-menu #menu="matMenu" xPosition="before" class="bg-navbar">
+        <button mat-menu-item class="fs-5 d-flex align-items-center" (click)="logout()">
+          <span class="material-icons me-1">&#xe9ba;</span>
+          Cerrar sesión
+        </button>
+      </mat-menu>
       <div class="navbar-brand me-5 crystal-border">
         <span class="material-icons shopping-cart">&#xe8cc;</span>
       </div>
@@ -30,17 +38,25 @@
             <li class="nav-item">
               <a class="nav-link" href="#">Catálogo</a>
             </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Autores</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Editoriales</a>
+            </li>
             <li class="nav-item dropdown">
               <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                Otros
+                Administración
               </a>
               <ul class="dropdown-menu fs-4">
-                <li><a class="dropdown-item" href="#">Autores</a></li>
-                <li><a class="dropdown-item" href="#">Editoriales</a></li>
+                <li><a class="dropdown-item" href="#">Gestionar autores</a></li>
+                <li><a class="dropdown-item" href="#">Gestionar editoriales</a></li>
+                <li><a class="dropdown-item" href="#">Gestionar libros</a></li>
                 <li>
                   <hr class="dropdown-divider">
                 </li>
-                <li><a class="dropdown-item" href="#">Sobre nosotros</a></li>
+                <li><a class="dropdown-item" href="#">Gestionar proveedores</a></li>
+                <li><a class="dropdown-item" href="#">Gestionar inventario</a></li>
               </ul>
             </li>
           </ul>

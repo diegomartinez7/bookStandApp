@@ -16,7 +16,7 @@
 }
 
 .bg-transparent {
-    background-color: rgba(255,255,255, 0.5) !important;
+    background-color: rgba(255,255,255, 0.4) !important;
 }
 
 .rounded-border {
@@ -59,12 +59,25 @@
     border: 1px solid transparent;
 }
 
+// Color de inputs en formularios
+.mat-form-field-flex {
+    background-color: rgb(195, 237, 250) !important;
+}
+
+// Color de inputs al hacer hover o seleccionar una opción sugerida
+input:-webkit-autofill {
+    -webkit-box-shadow: 0 0 0px 10px rgb(195, 237, 250) inset !important;
+}
+
 body {
     // background-color: rgb(250, 225, 195);
     background-color: rgb(195, 237, 250);
-    // background: linear-gradient(rgb(195, 237, 250), rgba(96, 190, 219, 0.75));
+    // Colocadas por Angular Material
+    margin: 0;
+    font-family: Roboto,"Helvetica Neue", sans-serif;
 }
 
 h1 {
     color: rgb(84, 96, 109);
 }
+html, body { height: 100%; }

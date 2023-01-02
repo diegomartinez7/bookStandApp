@@ -33,9 +33,10 @@ public class Usuario {
     private String password;
     // private boolean is_admin;
 
+    //CHECAR SI SE MODIFICAN PARA ESTAR EN ESPAÑOL
     @ManyToMany(fetch = FetchType.LAZY)
     @JoinTable(
-        name = "user_roles", 
+        name = "user_roles",
         joinColumns = @JoinColumn(name = "user_id"),
         inverseJoinColumns = @JoinColumn(name = "role_id")
     )

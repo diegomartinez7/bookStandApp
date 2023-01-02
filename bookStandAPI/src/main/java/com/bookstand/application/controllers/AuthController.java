@@ -34,7 +34,7 @@ import com.bookstand.application.repositories.UsuarioRepository;
 import com.bookstand.application.security.jwt.JwtUtils;
 import com.bookstand.application.security.services.UserDetailsImpl;
 
-@CrossOrigin(origins = "*", maxAge = 3600)
+@CrossOrigin(origins = "http://localhost:4200", maxAge = 3600, allowCredentials="true")
 @RestController
 @RequestMapping("/api/auth")
 public class AuthController {
@@ -109,7 +109,6 @@ public class AuthController {
         }
         else {
             strRoles.forEach(rol -> {
-                System.out.println("EEEEEEEEEEEEEEEEEEL ROOOOOOOOOOOOOOL: "+rol);
                 switch (rol) {
                     case "admin":
                         System.out.println("ENTRE AL ROL DE ADMIN");

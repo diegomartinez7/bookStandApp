@@ -1,0 +1,42 @@
+<div class="h-100 d-flex align-items-center">
+    <div class="p-4 rounded-border bg-navbar col-5 mx-auto">
+        <p class="fs-2 text-center text-primary">Inicio de sesión</p>
+        <form [formGroup]="loginForm" (ngSubmit)="login()" class="row">
+            
+            <mat-form-field appearance="fill" class="col-7 mx-auto my-2">
+                <mat-label>Nombre de usuario</mat-label>
+                <input matInput placeholder="Lewis Carroll" formControlName="username" required>
+                <mat-error *ngIf="this.loginForm.get('username')?.touched &&
+                    this.loginForm.get('username')?.hasError('required')">
+                    Valor requerido
+                </mat-error>
+                <mat-error *ngIf="this.loginForm.get('username')?.touched &&
+                    this.loginForm.get('username')?.hasError('maxlength')">
+                    Nombre menor a 50 caracteres
+                </mat-error>
+            </mat-form-field>
+
+            <mat-form-field appearance="fill" class="col-7 mx-auto my-2">
+                <mat-label>Contraseña</mat-label>
+                <input matInput formControlName="password" required>
+                <mat-error *ngIf="this.loginForm.get('password')?.touched &&
+                    this.loginForm.get('password')?.hasError('required')">
+                    Valor requerido
+                </mat-error>
+                <mat-error *ngIf="this.loginForm.get('password')?.touched &&
+                    this.loginForm.get('password')?.hasError('minlength')">
+                    Contraseña mínima de 8 caracteres
+                </mat-error>
+            </mat-form-field>
+
+            <button class="btn btn-primary col-7 mx-auto" type="submit" mat-button [disabled]="!loginForm.valid">
+                <span class="fs-5">Entrar</span>
+            </button>
+        </form>
+        <p class="text-center fs-5 my-2">
+            <b>
+                ¿No tienes cuenta?, <a [routerLink]="['/register']">regístrate aquí</a>
+            </b>
+        </p>
+    </div>
+</div>
