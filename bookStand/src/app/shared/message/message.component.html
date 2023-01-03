@@ -1,0 +1,7 @@
+<h1 class="title">{{title}}</h1>
+<span class="body">{{body}}</span>
+<div class="actions">
+    <button *ngFor="let a of actions | async" mat-raised-button (click)="a.onClick(dialogRef)" [color]=" a.color">
+        {{a.text}}
+    </button>
+</div>

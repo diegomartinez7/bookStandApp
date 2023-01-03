@@ -19,13 +19,38 @@
     background-color: rgba(255,255,255, 0.4) !important;
 }
 
+.bg-null {
+    background-color: rgba(255,255,255, 0) !important;
+}
+
+.bg-blue {
+    background-color: rgb(53, 89, 128) !important;
+}
+
+.bg-darkblue {
+    background-color: rgb(20, 76, 136) !important;
+}
+
+.blue-font {
+    color: rgb(53, 89, 128);
+}
+
+.darkblue-font {
+    color: rgb(20, 76, 136);
+}
+
 .rounded-border {
     border-radius: 1.5rem;
 }
 
-.book_cover {
+.book-cover {
     max-width: 500px;
     max-height: 650px;
+}
+
+.author-img {
+    max-width: 300px;
+    max-height: 300px;
 }
 
 .text-justify {
@@ -57,6 +82,19 @@
 
 .crystal-border {
     border: 1px solid transparent;
+}
+
+.nav-link:hover {
+    background-color: white;
+}
+
+.icon-text {
+    display: flex !important;
+    align-items: center !important;
+}
+
+.card-shadow {
+    box-shadow: 5px 5px 1.5rem rgb(100, 100, 100) !important;
 }
 
 // Color de inputs en formularios

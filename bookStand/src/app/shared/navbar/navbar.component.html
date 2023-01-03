@@ -1,62 +1,95 @@
 <nav class="navbar bg-navbar position-nav">
     <div class="container-fluid">
+      <!-- Logotipo -->
       <img src="./assets/img/logo_navbar.png" class="ms-5" style="max-height: 70px;" alt="">
-      <!-- <a class="navbar-brand m-auto" href="#">Book Stand</a> -->
-      <!-- <p>Donde encuentras porque encuentras</p> -->
+
+      <!-- Nombre de usuario y botón de logout -->
       <div class="navbar-brand ms-auto user-name" [matMenuTriggerFor]="menu">
-        <!-- <button mat-button [matMenuTriggerFor]="menu"> -->
           <span class="material-icons me-3" style="font-size: 40px;">&#xea78;</span>
           <span><b><i>{{user.username}}</i></b></span>
-        <!-- </button> -->
       </div>
       <mat-menu #menu="matMenu" xPosition="before" class="bg-navbar">
-        <button mat-menu-item class="fs-5 d-flex align-items-center" (click)="logout()">
+        <button mat-menu-item class="fs-5 icon-text" (click)="logout()">
           <span class="material-icons me-1">&#xe9ba;</span>
           Cerrar sesión
         </button>
       </mat-menu>
+
+      <!-- Carrito -->
       <div class="navbar-brand me-5 crystal-border">
         <span class="material-icons shopping-cart">&#xe8cc;</span>
       </div>
-      <button class="navbar-brand crystal-border" style="background-color: transparent;" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
+
+      <!-- Menú -->
+      <button class="navbar-brand crystal-border" style="background-color: transparent;"
+        type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
         <span class="navbar-toggler-icon"></span>
       </button>
-      <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
-        <div class="offcanvas-header bg-navbar">
-          <h5 class="offcanvas-title fs-2" id="offcanvasNavbarLabel">Menú</h5>
-          <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+      <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel"
+        style="background: linear-gradient(rgba(164, 213, 228, 1), rgba(96, 190, 219, 1));">
+        <!-- Título -->
+        <div class="offcanvas-header">
+          <h5 class="offcanvas-title fs-1 blue-font mx-auto" id="offcanvasNavbarLabel">Menú</h5>
+          <button type="button" class="btn-close btn btn-secondary fs-5" data-bs-dismiss="offcanvas"
+            aria-label="Close"></button>
         </div>
-        <form class="d-flex bg-navbar px-2" role="search">
+
+        <!-- Barra de búsqueda POSIBLEMENTE REMOVER -->
+        <!-- <form class="d-flex px-2" role="search">
           <input class="form-control me-2" type="search" placeholder="Buscar un título" aria-label="Search">
           <button class="btn btn-dark" type="submit">Buscar</button>
-        </form>
-        <div class="offcanvas-body bg-navbar">
+        </form> -->
+
+        <!-- Opciones -->
+        <div class="offcanvas-body">
           <ul class="navbar-nav justify-content-end flex-grow-1 pe-3 fs-3">
             <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="#">Inicio</a>
+              <a class="nav-link icon-text blue-font px-4" [routerLink]="['/books']">
+                <span class="material-icons fs-3 me-3">&#xea12;</span><b>Inicio</b>
+              </a>
+              <hr class="my-1">
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Catálogo</a>
+              <a class="nav-link icon-text blue-font px-4" [routerLink]="['/catalogue']">
+                <span class="material-icons fs-3 me-3">&#xea19;</span><b>Catálogo</b>
+              </a>
+              <hr class="my-1">
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Autores</a>
+              <a class="nav-link icon-text blue-font px-4" [routerLink]="['/authors']">
+                <span class="material-icons fs-3 me-3">&#xe7ef;</span><b>Autores</b>
+              </a>
+              <hr class="my-1">
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Editoriales</a>
+              <a class="nav-link icon-text blue-font px-4" href="#">
+                <span class="material-icons fs-3 me-3">&#xe866;</span><b>Editoriales</b>
+              </a>
+              <hr class="my-1">
             </li>
             <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                Administración
+              <a class="nav-link icon-text blue-font dropdown-toggle px-4" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                <span class="material-icons fs-3 me-3">&#xef48;</span><b>Administración</b>
               </a>
-              <ul class="dropdown-menu fs-4">
-                <li><a class="dropdown-item" href="#">Gestionar autores</a></li>
-                <li><a class="dropdown-item" href="#">Gestionar editoriales</a></li>
-                <li><a class="dropdown-item" href="#">Gestionar libros</a></li>
+              <ul class="dropdown-menu fs-4 bg-navbar border border-dark border-1">
                 <li>
-                  <hr class="dropdown-divider">
+                  <a class="blue-font dropdown-item" href="#"><b>Gestionar autores</b></a>
                 </li>
-                <li><a class="dropdown-item" href="#">Gestionar proveedores</a></li>
-                <li><a class="dropdown-item" href="#">Gestionar inventario</a></li>
+                <li>
+                  <a class="blue-font dropdown-item" href="#"><b>Gestionar editoriales</b></a>
+                </li>
+                <li>
+                  <a class="blue-font dropdown-item" href="#"><b>Gestionar libros</b></a>
+                </li>
+                <li>
+                <hr class="dropdown-divider">
+                </li>
+                <li>
+                  <a class="blue-font dropdown-item" href="#"><b>Gestionar proveedores</b></a>
+                </li>
+                <li>
+                  <a class="blue-font dropdown-item" href="#"><b>Gestionar inventario</b></a>
+                </li>
               </ul>
             </li>
           </ul>

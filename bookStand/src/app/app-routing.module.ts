@@ -1,6 +1,8 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { AuthorsComponent } from './components/authors/authors.component';
 import { BookComponent } from './components/book/book.component';
+import { CatalogueComponent } from './components/catalogue/catalogue.component';
 import { LoginComponent } from './components/login/login.component';
 import { MainComponent } from './components/main/main.component';
 import { RegisterComponent } from './components/register/register.component';
@@ -16,6 +18,8 @@ const routes: Routes = [
     canActivate: [AuthGuard],
     data: { sessionRequired: true },
     children: [
+      { path: 'authors', component: AuthorsComponent },
+      { path: 'catalogue', component: CatalogueComponent },
       { path: 'books', component: BookComponent }
     ]
   },

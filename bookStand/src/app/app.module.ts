@@ -6,6 +6,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { MatMenuModule } from '@angular/material/menu';
+import { MatCardModule } from '@angular/material/card';
+import { MatButtonModule } from '@angular/material/button';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -17,6 +19,10 @@ import { MainComponent } from './components/main/main.component';
 
 import { httpInterceptorProviders } from './helpers/http.interceptor';
 import { AuthGuard } from './helpers/auth.guard';
+import { AuthorsComponent } from './components/authors/authors.component';
+import { MessageComponent } from './shared/message/message.component';
+import { AlertDialogComponent } from './shared/alert-dialog/alert-dialog.component';
+import { CatalogueComponent } from './components/catalogue/catalogue.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +31,11 @@ import { AuthGuard } from './helpers/auth.guard';
     NavbarComponent,
     LoginComponent,
     RegisterComponent,
-    MainComponent
+    MainComponent,
+    AuthorsComponent,
+    MessageComponent,
+    AlertDialogComponent,
+    CatalogueComponent
   ],
   imports: [
     BrowserModule,
@@ -36,7 +46,9 @@ import { AuthGuard } from './helpers/auth.guard';
     BrowserAnimationsModule,
     MatFormFieldModule,
     MatInputModule,
-    MatMenuModule
+    MatMenuModule,
+    MatCardModule,
+    MatButtonModule
   ],
   providers: [httpInterceptorProviders, AuthGuard],
   bootstrap: [AppComponent]

@@ -1,0 +1,9 @@
+<div class="title">
+    <h2 style="text-align: center;"> {{title}}</h2>
+</div>
+<div class="body">{{message}}</div>
+<div class="controls">
+    <button *ngIf="showAccept" mat-raised-button color="primary" (click)="accept()">Aceptar</button>
+    <button *ngIf="showCancel" mat-raised-button color="light" (click)="cancel()">Cancelar</button>
+    <button class="close" *ngIf="showClose" mat-raised-button color="light" (click)="close()">Cerrar</button>
+</div>

@@ -1,0 +1,23 @@
+<h1>Una amplia selección de novelas</h1>
+
+<div class="pb-4">
+    <div class="row gap-5 text-center justify-content-center fs-5 p-5">
+        <mat-card class="col col-9 col-sm-7 col-md-5 col-lg-3 col-xl-2 card-shadow bg-transparent"
+            *ngFor="let i of [].constructor(10)">
+            <img mat-card-image src="./assets/img/gulliver_cover.jpeg" alt="Imagen del libro">
+            <mat-card-content class="mb-1">
+                <p class="fs-5 mb-1">Los Viajes de Gulliver</p>
+                <p class="fs-5 icon-text justify-content-center">
+                    <span class="material-icons text-success mx-1">&#xf05b;</span>
+                    <b>400</b>
+                </p>
+            </mat-card-content>
+            <mat-card-actions>
+                <button class="btn btn-primary mx-auto icon-text justify-content-center fs-5 bg-navbar text-dark">
+                    <span class="material-icons m-1">&#xe8cc;</span>
+                    Añadir
+                </button>
+            </mat-card-actions>
+        </mat-card>
+    </div>
+</div>

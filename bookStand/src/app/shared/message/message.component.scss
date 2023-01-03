@@ -1,0 +1,22 @@
+button + button {
+    margin-left: 10px;
+}
+
+button {
+    margin-top: 10px;
+}
+
+.title {
+    text-align: center;
+}
+
+.actions {
+    display: flex;
+    justify-content: center;
+}
+
+.body {
+    display: flex;
+    justify-content: center;
+    white-space: break-spaces;
+}

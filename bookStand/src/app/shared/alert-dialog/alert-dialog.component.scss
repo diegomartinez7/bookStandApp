@@ -1,0 +1,28 @@
+.title{
+    color: red;
+    display: flex;
+    justify-content: center;
+    
+    h1 {
+        text-align: center !important;
+    }
+}
+
+.body{
+    display: flex;
+    justify-content: center;
+}
+
+.controls{
+    padding: 20px 10px  0 10px;
+    display: flex;
+    justify-content: center;
+
+    >* {
+        margin: 0 10px;
+    }
+
+    .close {
+        flex:1;
+    }
+}
