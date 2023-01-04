@@ -11,6 +11,10 @@ import org.springframework.context.annotation.Bean;
 import com.bookstand.application.models.AutorModel.Autor;
 import com.bookstand.application.models.EditorialModel.Editorial;
 import com.bookstand.application.models.LibroModel.Libro;
+// import com.bookstand.application.models.RolModel.Rol;
+// import com.bookstand.application.models.RolModel.RolesEnum;
+// import com.bookstand.application.services.RolService;
+// import com.bookstand.application.services.RolServiceImpl;
 import com.ulisesbocchio.jasyptspringboot.annotation.EnableEncryptableProperties;
 
 @SpringBootApplication
@@ -22,6 +26,14 @@ public class Application {
 
 	public static void main(String[] args) {
 		SpringApplication.run(Application.class, args);
+
+		// RolService rolService = new RolServiceImpl();
+		// if(rolService.findByNombre(RolesEnum.ROL_USUARIO.name()) != null){
+		// 	rolService.saveRol(new Rol(RolesEnum.ROL_USUARIO.name()));
+		// }
+		// if(rolService.findByNombre(RolesEnum.ROL_ADMIN.name()) != null){
+		// 	rolService.saveRol(new Rol(RolesEnum.ROL_USUARIO.name()));
+		// }
 
 		Autor autor1 = new Autor(
 			"Alexandre Dumas Davy de la Pailleterie", 
