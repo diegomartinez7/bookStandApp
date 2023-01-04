@@ -1,7 +1,7 @@
 <nav class="navbar bg-navbar position-nav">
     <div class="container-fluid">
       <!-- Logotipo -->
-      <img src="./assets/img/logo_navbar.png" class="ms-5" style="max-height: 70px;" alt="">
+      <img src="./assets/img/logo_navbar.png" class="ms-5 img-fluid" style="max-height: 70px;" alt="">
 
       <!-- Nombre de usuario y botón de logout -->
       <div class="navbar-brand ms-auto user-name" [matMenuTriggerFor]="menu">
@@ -62,7 +62,7 @@
               <hr class="my-1">
             </li>
             <li class="nav-item">
-              <a class="nav-link icon-text blue-font px-4" href="#">
+              <a class="nav-link icon-text blue-font px-4" [routerLink]="['/editorials']">
                 <span class="material-icons fs-3 me-3">&#xe866;</span><b>Editoriales</b>
               </a>
               <hr class="my-1">

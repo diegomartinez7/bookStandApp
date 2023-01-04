@@ -8,6 +8,7 @@ import { MatInputModule } from '@angular/material/input';
 import { MatMenuModule } from '@angular/material/menu';
 import { MatCardModule } from '@angular/material/card';
 import { MatButtonModule } from '@angular/material/button';
+import { MatSnackBarModule } from '@angular/material/snack-bar';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -23,6 +24,7 @@ import { AuthorsComponent } from './components/authors/authors.component';
 import { MessageComponent } from './shared/message/message.component';
 import { AlertDialogComponent } from './shared/alert-dialog/alert-dialog.component';
 import { CatalogueComponent } from './components/catalogue/catalogue.component';
+import { EditorialsComponent } from './components/editorials/editorials.component';
 
 @NgModule({
   declarations: [
@@ -35,7 +37,8 @@ import { CatalogueComponent } from './components/catalogue/catalogue.component';
     AuthorsComponent,
     MessageComponent,
     AlertDialogComponent,
-    CatalogueComponent
+    CatalogueComponent,
+    EditorialsComponent
   ],
   imports: [
     BrowserModule,
@@ -48,7 +51,8 @@ import { CatalogueComponent } from './components/catalogue/catalogue.component';
     MatInputModule,
     MatMenuModule,
     MatCardModule,
-    MatButtonModule
+    MatButtonModule,
+    MatSnackBarModule
   ],
   providers: [httpInterceptorProviders, AuthGuard],
   bootstrap: [AppComponent]

@@ -1,0 +1,37 @@
+<h1>Editoriales</h1>
+
+<div class="d-grid gap-5 pb-4">
+    <div class="bg-transparent rounded-border fs-5 p-4">
+        <p>Algunas de las mentes más espectaculares de la historia; intrigados por la aventura, romance, misterio, entre muchas otras situaciones excepcionales que despiertan lo mejor del ser humano.</p>
+    </div>
+
+    <div class="row">
+        <div *ngFor="let i of [].constructor(10)" class="col-lg-6 my-3">
+            <div class="bg-transparent icon-text rounded-border fs-5 p-4 justify-content-center
+                flex-wrap flex-sm-nowrap flex-lg-wrap flex-xl-nowrap">
+                <div class="container-img">
+                    <img class="img-fluid border border-5" src="./assets/img/penguin-random-house.jpg" alt="Imagen del autor 'Robert Louis Stevenson'">
+                </div>
+                <div class="ms-4 my-2">
+                    <h2 class="darkblue-font fs-4">
+                        Penguin Random House
+                    </h2>
+                    <p class="icon-text">
+                        <span class="material-icons fs-4 me-1">&#xe153;</span>
+                        <span>
+                            <b>País: </b>
+                            España
+                        </span>
+                    </p>
+                    <p class="icon-text">
+                        <span class="material-icons fs-4 me-1">&#xebcc;</span>
+                        <span>
+                            <b>Año de nacimiento: </b>
+                            (1850)
+                        </span>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

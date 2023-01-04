@@ -48,9 +48,20 @@
     max-height: 650px;
 }
 
-.author-img {
+.container-img {
     max-width: 300px;
     max-height: 300px;
+}
+
+.cursor-pointer {
+    cursor: pointer;
+    -webkit-filter: grayscale(100%);
+    filter: grayscale(100%);
+}
+
+img.cursor-pointer:hover {
+    -webkit-filter: grayscale(0%);
+    filter: grayscale(0%);
 }
 
 .text-justify {
@@ -105,6 +116,19 @@
 // Color de inputs al hacer hover o seleccionar una opción sugerida
 input:-webkit-autofill {
     -webkit-box-shadow: 0 0 0px 10px rgb(195, 237, 250) inset !important;
+}
+
+// Propiedades para snackbar
+.snackbar {
+    border: 1px solid rgb(20, 76, 136);
+    background: linear-gradient(rgba(164, 213, 228, 0.75), rgba(96, 190, 219, 0.75));
+    color: rgb(0, 0, 0);
+    font-weight: bold;
+    overflow-wrap: break-word;
+    
+    .mat-button-wrapper {
+        color: black !important; // action text color
+    }
 }
 
 body {
