@@ -18,7 +18,7 @@
 
             <mat-form-field appearance="fill" class="col-7 mx-auto my-2">
                 <mat-label>Contraseña</mat-label>
-                <input matInput formControlName="password" required>
+                <input matInput type="password" formControlName="password" required>
                 <mat-error *ngIf="this.loginForm.get('password')?.touched &&
                     this.loginForm.get('password')?.hasError('required')">
                     Valor requerido
